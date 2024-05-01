@@ -20,4 +20,14 @@ app.use(express.static("public"))//it is used to serve static files such as
 app.use(cookieParser()); //It is middleware that parses HTTP request cookies.
 //we can access and keep the cookies on the browser of the user.
 
+//routes import 
+import userRouter from './routes/user.routes.js'
+
+//routes declaration
+app.use("/api/v1/users",userRouter)
+
+//when we want to declare any route then we will use a middleware
+// i.e app.use() instead of app.get or any other because here the method is defined on some other file 
+//therefore we will import it and then define it.
+
 export  { app } 
