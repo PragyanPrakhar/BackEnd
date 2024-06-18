@@ -18,6 +18,10 @@ connectDB()
     console.log("Mongo Db connection failed !!", err);
   });
 
+  //koi v async function complete hota hai toh
+  //promise return karta hai, therefore we are uisng then and catch here.
+  
+
 /*
 import express from "express";
 const app=express();

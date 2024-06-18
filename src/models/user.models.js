@@ -9,7 +9,7 @@ const userSchema = new Schema(
       unique: true,
       lowercase: true,
       trim: true,
-      index: true,
+      index: true, //index field optimize the searching process,although it does affect the performance.That's we should enable index as true carefully.
     },
     email: {
       type: String,
